@@ -1,5 +1,5 @@
 <?php
-$url_base ="http://localhost/aplicacion/";
+$url_base ="http://localhost/practica/";
 ?>
 
 <!doctype html>
@@ -25,7 +25,7 @@ $url_base ="http://localhost/aplicacion/";
           </li>
           <!--Secciones para el nav-->
           <li class="nav-item">
-              <a class="nav-link" href="<?php echo $url_base;?>secciones/empleados/">Empleados</a>
+              <a class="nav-link" href="<?php echo $url_base;?>secciones/empleados/index.php">Empleados</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="<?php echo $url_base;?>secciones/puestos/">Puestos</a>
