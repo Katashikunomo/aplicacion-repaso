@@ -1,3 +1,34 @@
+<?php
+include("../../bd.php");
+if ($_POST) {
+  # code...
+  // $post = strtoupper($_POST);
+  
+  // print_r($_POST);
+
+  //recolectamos los adtos del metodo post
+  $usuario=(isset($_POST["usuario"])?$_POST["usuario"]:"");
+  $pass=(isset($_POST["password"])?$_POST["password"]:"");
+  $correo=(isset($_POST["correo"])?$_POST["correo"]:"");
+  //preparar la insersion de los datos
+  $sentencia = $conexion->prepare("INSERT INTO tbl_usuarios(id,usuario,password,correo) VALUES (null, :usuario, :password,:correo)");
+  //Asignando los valores que vienen del formulario
+  $sentencia->bindParam(":usuario",$usuario);
+  $sentencia->bindParam(":password",$pass);
+  $sentencia->bindParam(":correo",$correo);
+  $sentencia->execute();
+  if ($sentencia) {
+          
+          echo"<div class='alert alert-success' role='alert'>";
+          echo "<strong>Registro</strong> Agregado exitosamente!";
+          echo "</div>";       
+  }
+}
+
+
+
+?>
+
 <?php include("../../templates/header.php");?>
 <h1>crear usuarios</h1>
 
