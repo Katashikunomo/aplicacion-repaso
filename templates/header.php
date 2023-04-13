@@ -1,5 +1,5 @@
 <?php
-$url_base ="http://localhost/practica/";
+$url_base ="http://localhost/app/";
 ?>
 
 <!doctype html>

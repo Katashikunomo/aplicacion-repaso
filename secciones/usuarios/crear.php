@@ -60,6 +60,7 @@ if ($_POST) {
                     class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="Escribe tu contraseña" Required>
                 </div>
 
+                
                 <button type="submit" class="btn btn-success">Agregar</button>
                 <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
             </form>
